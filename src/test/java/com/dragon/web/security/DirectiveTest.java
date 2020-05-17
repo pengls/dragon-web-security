@@ -1,6 +1,7 @@
 package com.dragon.web.security;
 
 import com.dragon.web.security.csp.*;
+import org.apache.commons.text.StringEscapeUtils;
 import org.junit.Test;
 
 /**
@@ -22,5 +23,10 @@ public class DirectiveTest {
                 .getCSPHeader();
         System.out.println(header.getName());
         System.out.println(header.getValue());
+    }
+
+    @Test
+    public void t2(){
+        System.out.println(StringEscapeUtils.escapeHtml4("《》<中文>"));
     }
 }

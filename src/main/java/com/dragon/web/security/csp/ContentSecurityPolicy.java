@@ -48,6 +48,6 @@ public class ContentSecurityPolicy {
             });
             val = valBuffer.toString();
         }
-        return reportOnly ? new Header(SecurityConstant.SecurityHeader.CSP_REPORTONLY_HEADER, val) : new Header(SecurityConstant.SecurityHeader.CSP_HEADER, val);
+        return reportOnly ? new Header(SecurityConstant.SecurityHeader.CONTENT_SECURITY_POLICY_REPORT_ONLY.getName(), val) : new Header(SecurityConstant.SecurityHeader.CONTENT_SECURITY_POLICY.getName(), val);
     }
 }

@@ -16,8 +16,9 @@
         <maven.javadoc.skip>false</maven.javadoc.skip>
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
-        <common-lang3>3.9</common-lang3>
-        <common-collections>4.4</common-collections>
+        <commons-text>1.8</commons-text>
+        <commons-lang3>3.9</commons-lang3>
+        <commons-collections>4.4</commons-collections>
         <servlet.api>3.1.0</servlet.api>
         <lombok>1.18.12</lombok>
         <jmh>1.23</jmh>
@@ -26,13 +27,18 @@
     <dependencies>
         <dependency>
             <groupId>org.apache.commons</groupId>
+            <artifactId>commons-text</artifactId>
+            <version>${commons-text}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.commons</groupId>
             <artifactId>commons-lang3</artifactId>
-            <version>${common-lang3}</version>
+            <version>${commons-lang3}</version>
         </dependency>
         <dependency>
             <groupId>org.apache.commons</groupId>
             <artifactId>commons-collections4</artifactId>
-            <version>${common-collections}</version>
+            <version>${commons-collections}</version>
         </dependency>
         <dependency>
             <groupId>org.projectlombok</groupId>
@@ -40,7 +46,6 @@
             <version>${lombok}</version>
             <scope>provided</scope>
         </dependency>
-
         <dependency>
             <groupId>javax.servlet</groupId>
             <artifactId>javax.servlet-api</artifactId>
